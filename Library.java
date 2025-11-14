@@ -12,8 +12,23 @@ public class Library extends Building implements LibraryRequirements {
      * param name
      * param address
      * param nFloors
+     * param hasElevator
      */
     public Library(String name, String address, Integer nFloors, Boolean hasElevator) {
+      super(name, address, nFloors);
+      this.hasElevator = hasElevator;
+      collection = new Hashtable<String, Boolean>();
+      System.out.println("You have built a library: 📖");
+    }
+
+    /*
+     * constructor
+     * param name
+     * param address
+     * param nFloors
+     * param hasElevator
+     */
+    public Library(String name, String address, Integer nFloors) {
       super(name, address, nFloors);
       this.hasElevator = false;
       collection = new Hashtable<String, Boolean>();

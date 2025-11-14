@@ -113,7 +113,7 @@ public class CampusMap {
         campusCenterCafe.sellCoffee(12, 2, 2);
         compassCafe.sellCoffee(16);
 
-        Library neilson = new Library("Neilson Library", "Chapin", 3, false);
+        Library neilson = new Library("Neilson Library", "Chapin", 3, true);
         neilson.showOptions();
         myMap.addBuilding(neilson);
         neilson.addTitle("Alice in Wonderland");

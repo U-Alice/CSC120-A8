@@ -34,7 +34,6 @@ public class Cafe extends Building implements CafeRequirements{
      * param nCups
      * param name
      * param address
-     * param nFloors
      */
     public Cafe(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups, String name, String address) {
         super(name, address, 1);
