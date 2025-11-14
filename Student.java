@@ -1,21 +1,21 @@
 import java.util.ArrayList;
 
 public class Student {
-    // Attributes 
-    private String name; 
-    private String id; 
-    private int classYear; 
-    private ArrayList<Course> classes; 
+    // Attributes
+    private String name;
+    private String id;
+    private int classYear;
+    private ArrayList<Course> classes;
 
     public Student(String name, String id, int classYear) {
         this.name = name;
         this.id = id;
         this.classYear = classYear;
-        this.classes = new ArrayList<>(); 
+        this.classes = new ArrayList<>();
     }
 
     public String getName() {
-        return this.name; 
+        return this.name;
     }
 
     public String toString() {
@@ -29,5 +29,5 @@ public class Student {
         ab.classes.add(csc120);
         System.out.println(ab.classes);
     }
-    
+
 }
