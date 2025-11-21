@@ -31,7 +31,6 @@ public class House extends Building implements HouseRequirements{
    * register a student as a resident
    * param s
    */
-  @Override
   public void moveIn(Student s) {
     if(residents.contains(s)){
       throw new RuntimeException("Student already registered as a resident!");
@@ -73,7 +72,6 @@ public class House extends Building implements HouseRequirements{
    * param s
    * return s
    */
-  @Override
   public void moveOut() {
     residents.removeAll(residents);
     System.out.println("Succesfully moved out" + " students in " + this.getName());
@@ -84,7 +82,6 @@ public class House extends Building implements HouseRequirements{
    * param s
    * return boolean
    */
-  @Override
   public boolean isResident(Student s) {
     return residents.contains(s);
   }
@@ -96,7 +93,7 @@ public class House extends Building implements HouseRequirements{
    * param nFloors
    * param hasDiningRoom
    */
-  public House(String name, String address, Integer nFloors, boolean hasDiningRoom, boolean hasElevator) {
+  public House(String name, String address, int nFloors, boolean hasDiningRoom, boolean hasElevator) {
     super(name, address, nFloors);
     this.hasElevator = hasElevator;
     this.hasDiningRoom = hasDiningRoom;
@@ -111,7 +108,7 @@ public class House extends Building implements HouseRequirements{
    * param nFloors
    * param hasDiningRoom
    */
-  public House(String name, String address, Integer nFloors) {
+  public House(String name, String address, int nFloors) {
     super(name, address, nFloors);
     this.hasElevator = false;
     this.hasDiningRoom = false;
@@ -126,7 +123,7 @@ public class House extends Building implements HouseRequirements{
    * param nFloors
    * param hasDiningRoom
    */
-  public House(String name, String address, Integer nFloors, boolean hasDiningRoom) {
+  public House(String name, String address, int nFloors, boolean hasDiningRoom) {
     super(name, address, nFloors);
     this.hasDiningRoom = hasDiningRoom;
     this.hasElevator = false;

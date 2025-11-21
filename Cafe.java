@@ -54,7 +54,6 @@ public class Cafe extends Building implements CafeRequirements{
      * param nSugarPackets
      * param nCreams
      */
-    @Override
     public void sellCoffee(int size, int nSugarPackets, int nCreams) {
         if((this.nCoffeeOunces - size) <= 0){
             this.restock(100, 0, 0, 0);
@@ -78,7 +77,6 @@ public class Cafe extends Building implements CafeRequirements{
      * sells coffee with no sugar and cream
      * param size
      */
-    @Override
     public void sellCoffee(int size) {
         sellCoffee(size, 0, 0);
     }
