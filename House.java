@@ -44,7 +44,6 @@ public class House extends Building implements HouseRequirements{
    * register a list of students as residents
    * param students
    */
-  @Override
   public void moveIn(ArrayList<Student> students) {
     for (Student s : students) {
       if (residents.contains(s)) {
@@ -60,7 +59,6 @@ public class House extends Building implements HouseRequirements{
    * param s
    * return s
    */
-  @Override
   public Student moveOut(Student s) {
     if(!residents.contains(s)){
       throw new RuntimeException("Student not registered as a resident!");

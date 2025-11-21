@@ -96,7 +96,7 @@ public class CampusMap {
         // calling moveOut for all students
         talbot.moveOut();
         // Constructor called for cafe with all parameters
-        Cafe campusCenterCafe = new Cafe(100, 100, 100, 100, "Campus Center Cafe", "1 Chapin Way", 4);
+        Cafe campusCenterCafe = new Cafe("Campus Center Cafe", "1 Chapin Way", 4,100, 100, 100, 100);
         campusCenterCafe.showOptions();
         // Constructor called for cafe with default nFloors (1) 
         Cafe compassCafe = new Cafe(100, 100, 100, 100, "Compass Cafe", "2 Chapin Way");
