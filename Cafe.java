@@ -1,4 +1,4 @@
-/* This is a stub for the Cafe class */
+/* This is the Cafe class */
 public class Cafe extends Building implements CafeRequirements{
 
     /* Class attributes */

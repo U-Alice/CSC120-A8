@@ -1,4 +1,4 @@
-/* This is a stub for the House class */
+/* This is the House class */
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-/* This is a stub for the Library class */
+/* This is the Library class */
 
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -28,7 +28,7 @@ public class Library extends Building implements LibraryRequirements {
      * param nFloors
      * param hasElevator
      */
-    public Library(String name, String address, Integer nFloors) {
+    public Library(String name, String address, int nFloors) {
       super(name, address, nFloors);
       this.hasElevator = false;
       collection = new Hashtable<String, Boolean>();

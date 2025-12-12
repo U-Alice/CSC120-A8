@@ -1,5 +1,6 @@
+/* Building class */
 public class Building {
-
+    /* Class attributes */
     protected String name;
     protected String address;
     protected int nFloors;
@@ -31,15 +32,24 @@ public class Building {
         this.nFloors = nFloors;
     }
 
-    /* Accessors */
+    /*
+     * getName
+     * return name
+     */
     public String getName() {
         return this.name;
     }
-
+    /*
+     * getAddress
+     * return address
+     */
     public String getAddress() {
         return this.address;
     }
-
+    /*
+     * getFloors
+     * return nFloors
+     */
     public int getFloors() {
         return this.nFloors;
     }
@@ -53,7 +63,10 @@ public class Building {
         System.out.println("You are now inside " + this.name + " on the ground floor.");
         return this; // Return a pointer to the current building
     }
-
+    /*
+     * exit the building
+     * return Building
+     */
     public Building exit() {
         if (this.activeFloor == -1) {
             throw new RuntimeException("You are not inside this Building. Must call enter() before exit().");
@@ -65,7 +78,10 @@ public class Building {
         this.activeFloor = -1; // We're leaving the building, so we no longer have a valid active floor
         return null; // We're outside now, so the building is null
     }
-
+    /*
+     * go to floor
+     * param floorNum
+     */
     public void goToFloor(int floorNum) {
         if (this.activeFloor == -1) {
             throw new RuntimeException("You are not inside this Building. Must call enter() before navigating between floors.");
@@ -76,19 +92,28 @@ public class Building {
         System.out.println("You are now on floor #" + floorNum + " of " + this.name);
         this.activeFloor = floorNum;
     }
-
+    /*
+     * go up one floor
+     */
     public void goUp() {
         this.goToFloor(this.activeFloor + 1);
     }
-
+    /*
+     * go down one floor
+     */
     public void goDown() {
         this.goToFloor(this.activeFloor - 1);
     }
-
+    /*
+     * show options
+     */
     public void showOptions() {
         System.out.println("Available options at " + this.name + ":\n + enter() \n + exit() \n + goUp() \n + goDown()\n + goToFloor(n)");
     }
-
+    /*
+     * toString method
+     * return String
+     */
     public String toString() {
         return this.name + " is a " + this.nFloors + "-story building located at " + this.address + ".";
     }
